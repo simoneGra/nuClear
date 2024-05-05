@@ -108,9 +108,9 @@
     <script>
       
       let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-
-      function changeCss() {
         var navElement = document.querySelector("header");
+        navElement.style.backgroundColor = "transparent";
+      function changeCss() {
         this.scrollY > vh ? (navElement.style.backgroundColor = "white" ) : (navElement.style.backgroundColor = "transparent");
       }
 
