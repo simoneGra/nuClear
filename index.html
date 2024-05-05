@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>nuClear</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar-container">
+
+      <img src="images/nuclear_logo2.png" alt="logo" class="logo">
+      
+      <nav>
+        
+        <ul>
+          <li><a class="active" href="./index.html">Home</a></li>
+          <li><a href="./visualizations.html">Visualizations</a></li>
+          <li><a href="./datasets.html">Datasets</a></li>
+          <li><a href="./game.html">Game</a></li>
+        </ul>
+      </nav>
+    </div>
+      
+    </header>
+
+    <div class="img-container"></div>
+    
+    <div class="spacer"></div>
+    
+    
+    <div class="content">
+      <div class="wordcloud-container">
+        <div class="wordcloud"></div>
+      </div>
+
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          <span class="highlight">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio incidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+
+
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio incidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio pincidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+      
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio incidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio incidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+
+      <div class="blocco">
+        <h3 class="title">
+          Dfsd sdfsf sdf sdf 
+        </h3>
+        <p class="content-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat veniam 
+          debitis tenetur saepe, repellat laborum similique sed molestias obcaecati, 
+          iusto neque distinctio incidunt, aspernatur sequi dolore in minus deleniti.
+        </p>
+      </div>
+        
+    </div>
+
+    <script>
+      
+      let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+      function changeCss() {
+        var navElement = document.querySelector("header");
+        this.scrollY > vh ? (navElement.style.backgroundColor = "white" ) : (navElement.style.backgroundColor = "transparent");
+      }
+
+      window.addEventListener("scroll", changeCss, false);
+    </script>
+</body>
+
+</html>

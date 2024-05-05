@@ -1,0 +1,63 @@
+.player {
+	position: absolute;
+	width: 10%;
+	height: auto;
+	bottom: 0px;
+	left: 60px;
+}
+.game-over-container {
+	width: 40%;
+	margin: 0 auto;
+	height: fit-content;
+}
+
+.game-over-container img {
+	width: 100%;
+	background-size: contain;
+}
+.restart-container {
+	/* position: absolute; */
+	width: 10%;
+	margin: 0 auto;
+	
+}
+.restart-container img {
+	width: 100%;
+}
+.restart:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.obstacle {
+	height: 16%;
+	position: absolute;
+	width: 10%;
+	background-image:url(./images/obstacle.png);
+	bottom: 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.grid, obstacle-container {
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+}
+#end_sign {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.d-none {
+	display: none;
+}
+
+.game {
+	border: 1px solid black;
+	width: 70vw;
+	height: 70vh;
+	background-color: red;
+	position: relative;
+	margin:  auto auto;
+}

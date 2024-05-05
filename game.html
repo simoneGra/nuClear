@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="dino.css" rel="stylesheet" type="text/css">
+	<link href="card.css" rel="stylesheet" type="text/css">
+
+	<title>Game</title>
+</head>
+
+<body>
+	<header>
+		<div class="navbar-container">
+			<img src="images/nuclear_logo2.png" alt="logo" class="logo">
+			<nav>
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./visualizations.html">Visualizations</a></li>
+					<li><a href="./datasets.html">Datasets</a></li>
+					<li><a class="active" href="./game.html">Game</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="spacer"></div>
+	<br>
+
+	<div class="content">
+
+		<div class="notifications-container">
+			<div class="success">
+				
+				<div class="flex reverse">
+					<div class="game">
+						
+						
+						<div id="end_sign" class="d-none">
+							<div class="game-over-container">
+							<img src="./images/game_over.png" alt="gameover">
+						</div>
+						<div class="restart-container">
+							<img src="./images/replay.png" alt="player">
+						</div>
+					</div>
+					<div class="grid">
+						<div class="obstacle-container"></div>
+						<img class="player" src="./images/player.png"></img>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	
+	<script>
+
+
+		const player = document.querySelector('.player')
+		const obstacle_container = document.querySelector('.obstacle-container')
+		const end_sign = document.getElementById('end_sign')
+		const restart = document.querySelector(".restart-container");
+		let isJumping = false
+		let gravity = 0.9
+		let isGameOver = false
+		let isStart = false;
+		function control(e) {
+			//https://keycode.info/
+			if (e.keyCode === 32) {
+				if (!isStart && !isGameOver) {
+					start_game();
+				}
+
+				if (!isJumping) {
+					isJumping = true
+					jump()
+				}
+
+			}
+		}
+
+		function start_game() {
+			isStart = true;
+			isGameOver = false
+			end_sign.classList.add('d-none')
+			player.attributes.src.value = "./images/player.png"
+			player.style.bottom = '0px'
+			generateObstacle();
+		}
+
+		restart.addEventListener('click', start_game)
+
+		document.addEventListener('keypress', control)
+
+		let player_y = 0
+
+		function jump() {
+			let count = 0
+			let timerId = setInterval(function () {
+
+				//move down
+				if (count === 15 || isGameOver) {
+					clearInterval(timerId)
+					// if (isGameOver)
+					//     player.attributes.src.value = "player_dead.png"
+					// // console.log('down')
+					let downTimerId = setInterval(function () {
+						if (count === 0 || isGameOver) {
+							// if (isGameOver)
+							//     player.attributes.src.value = "player_dead.png"
+							clearInterval(downTimerId)
+							isJumping = false
+						}
+						player_y -= 5
+						count--
+						player_y = player_y * gravity
+						if (player_y < 0)
+							player_y = 0;
+						player.style.bottom = player_y + 'px'
+					}, 20)
+				}
+				//move up
+				// // console.log('up')
+				player_y += 30
+				count++
+				player_y = player_y * gravity
+				player.style.bottom = player_y + 'px'
+				// // console.log(player.style.bottom)
+			}, 20)
+		}
+
+		function generateObstacle() {
+			const obstacle = document.createElement('div')
+			let randomTime = Math.random() * 3000
+			let obstaclePostion = +obstacle_container.offsetWidth
+
+			if (!isGameOver) {
+				obstacle.classList.add('obstacle');
+			}
+			obstacle_container.appendChild(obstacle)
+			obstacle.style.left = obstaclePostion + 'px'
+
+			let timerId = setInterval(function () {
+				if ((obstaclePostion > 60 && obstaclePostion < 120 && player_y < 60) || isGameOver) {
+					clearInterval(timerId)
+					if (!isGameOver) {
+						end_sign.classList.remove('d-none')
+						isGameOver = true
+						isStart = false
+						player.attributes.src.value = "./images/player_dead.png"
+						while (obstacle_container.firstChild) {
+							obstacle_container.removeChild(obstacle_container.lastChild)
+						}
+					}
+
+				}
+				if (obstaclePostion < 0) {
+					clearInterval(timerId)
+					obstacle.style.display = "none";
+				}
+				obstaclePostion -= 10;
+				obstacle.style.left = obstaclePostion + 'px';
+			}, 20)
+			if (!isGameOver) setTimeout(generateObstacle, randomTime)
+		}
+	</script>
+
+
+</body>
+
+</html>
