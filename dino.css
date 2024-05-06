@@ -39,9 +39,12 @@
 }
 
 .grid, obstacle-container {
-	background-color: #fff;
-	height: 100%;
+	background-image:url(images/sfondo_gioco3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 56.25%; /* 1080 / 1920 * 100 */
 	width: 100%;
+	margin: 0 auto;
 }
 #end_sign {
 	transform: translate(-50%, -50%);
