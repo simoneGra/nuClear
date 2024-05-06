@@ -122,6 +122,7 @@
 		function control(e) {
 			//https://keycode.info/
 			if (e.keyCode === 32) {
+				e.preventDefault();
 				if (!isStart && !isGameOver) {
 					start_game();
 				}
