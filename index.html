@@ -2,151 +2,156 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <title>nuClear</title>
-  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>nuClear</title>
+	<link rel="icon" type="image/jpg" href="images/favicon.jpg">
 </head>
 
 <body>
-  <header>
-    <div class="navbar-container">
+	<header>
+		<div class="navbar-container">
 
-      <img src="images/nuclear_logo.png" alt="logo" class="logo">
-      
-      <nav>
-        
-        <ul>
-          <li><a class="active" href="./index.html" ><b>Home</b></a></li>
-          <li><a href="./visualizations.html"><b>Visualizations</b></a></li>
-          <li><a href="./datasets.html"><b>Datasets</b></a></li>
-          <li><a href="./game.html"><b>Game</b></a></li>
-        </ul>
-      </nav>
-    </div>
-      
-    </header>
-   
-    <div class="img-container"></div>
-    
-    <div class="spacer"></div>
-    
-    <div class="content">
+			<img src="images/nuClear_logo.png" alt="logo" class="logo">
 
-      <div class="blocco">
-        <h3 class="title">
-          The demonization of nuclear power
-        </h3>
-        <p class="content-block">
-          In Italy, the story of nuclear energy is not
-          just a narrative of technology and policy but a saga woven deeply into the emotional
-          fabric of the nation. <span class="highlight">The Italian resistance to nuclear power 
-          is profound</span>, reflecting a collective sentiment shaped by countless propagands against 
-          this energy source, carried out for political interests.
-        </p>
+			<nav>
 
-        <p class="content-block">
-          The resistance is fueled by vivid memories of global nuclear disasters like the <span class="highlight">1986 Chernobyl 
-          accident</span>, which imprinted a sense of danger associated with nuclear technology in the national 
-          consciousness. The Italian landscape, with its stunning natural beauty, is something locals cherish 
-          deeply. The idea of nuclear accidents poses a threat not just to the environment but to the very 
-          soul of the country. For Italians, the risks of nuclear energy, including long-lasting nuclear
-          waste and the potential for catastrophic accidents, seem too great a gamble.
-        </p>
-      </div>
+				<ul>
+					<li><a class="active" href="./index.html"><b>Home</b></a></li>
+					<li><a href="./visualizations.html"><b>Visualizations</b></a></li>
+					<li><a href="./datasets.html"><b>Datasets</b></a></li>
+					<li><a href="./game.html"><b>Game</b></a></li>
+				</ul>
+			</nav>
+		</div>
 
-      <div class="wordcloud-container">
-        <div class="wordcloud"></div>
-      </div>
+	</header>
 
-      <div class="blocco">
-        
-        
-      </div>
+	<div class="img-container"></div>
 
-      <div class="blocco">
-        
-        <p class="content-block">
-          However, it's important to recognize that nuclear power also offers numerous advantages, 
-          and its production is not inherently wrong, as we are going to demonstrate throughout this 
-          report. Indeed, nuclear energy is a highly efficient source of electricity that can help reduce 
-          dependency on fossil fuels, thus significantly cutting greenhouse gas emissions. This is 
-          particularly crucial as the world seeks sustainable solutions to combat climate change.
-        </p>
-      </div>
-      
-      <div class="blocco">
-        
-        <p class="content-block">
-          Additionally, <span class="highlight">nuclear power provides a stable and reliable source of energy</span>. 
-          Unlike renewable sources such as solar and wind, which depend on weather conditions and 
-          time of day, nuclear energy can produce electricity continuously, 24/7. This consistency 
-          is invaluable for maintaining the energy supply needed to support Italy's industrial base 
-          and residential needs without interruption. Additionally, the technology behind nuclear energy 
-          has also advanced significantly. Modern nuclear reactors are designed with enhanced safety 
-          features that reduce the risk of accidents.
-        </p>
-      </div>
-        
-    </div>
+	<div class="spacer"></div>
 
-    <script>
-      
-      let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-        var navElement = document.querySelector("header");
-        navElement.style.backgroundColor = "transparent";
-      function changeCss() {
-        this.scrollY > vh ? (navElement.style.backgroundColor = "white" ) : (navElement.style.backgroundColor = "transparent");
-      }
+	<div class="content">
 
-      window.addEventListener("scroll", changeCss, false);
-    </script>
+		<div class="blocco">
+			<h3 class="title">
+				The demonization of nuclear power
+			</h3>
+			<p class="content-block">
+				In Italy, the story of nuclear energy is not
+				just a narrative of technology and policy but a saga woven deeply into the emotional
+				fabric of the nation. <span class="highlight">The Italian resistance to nuclear power
+					is profound</span>, reflecting a collective sentiment shaped by countless propagands against
+				this energy source, carried out for political interests.
+			</p>
 
-    <br>
-    <br>
-    <br>
-    <br> 
+			<p class="content-block">
+				The resistance is fueled by vivid memories of global nuclear disasters like the <span
+					class="highlight">1986
+					Chernobyl
+					accident</span>, which imprinted a sense of danger associated with nuclear technology in the
+				national
+				consciousness. The Italian landscape, with its stunning natural beauty, is something locals cherish
+				deeply. The idea of nuclear accidents poses a threat not just to the environment but to the very
+				soul of the country. For Italians, the risks of nuclear energy, including long-lasting nuclear
+				waste and the potential for catastrophic accidents, seem too great a gamble.
+			</p>
+		</div>
 
-    <!-- Site footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify">Data visualization project realized for LUISS Guido Carli University. 
-              The aim is to highlight the need for a low environmental impact energy source such as 
-              nuclear through the use of simple and effective visualizations. It provides a clear view of 
-              what is the actual consumption and production of energy and what are the various indicators 
-              that show the environmental impact for the different energy sources widely used.
-            </p>
-          </div>
+		<div class="wordcloud-container">
+			<div class="wordcloud"></div>
+		</div>
 
-          <br>
+		<div class="blocco">
 
-          <div class="col-xs-6 col-md-3">
-            <h6>Contacts</h6>
-            <ul class="footer-links">
-              <li><a href="">Elisa Dobici</a></li>
-              <li><a href="https://www.linkedin.com/in/simone-granato">Simone Granato</a></li>
-              <li><a href="https://www.linkedin.com/in/simone-luzi">Simone Luzi</a></li>
-            </ul>
-          </div>
 
-          
-        </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
-         <a href="https://www.luiss.it/">LUISS Guido Carli</a>.
-            </p>
-          </div>
+		</div>
 
-        </div>
-      </div>
-</footer>
+		<div class="blocco">
+
+			<p class="content-block">
+				However, it's important to recognize that nuclear power also offers numerous advantages,
+				and its production is not inherently wrong, as we are going to demonstrate throughout this
+				report. Indeed, nuclear energy is a highly efficient source of electricity that can help reduce
+				dependency on fossil fuels, thus significantly cutting greenhouse gas emissions. This is
+				particularly crucial as the world seeks sustainable solutions to combat climate change.
+			</p>
+		</div>
+
+		<div class="blocco">
+
+			<p class="content-block">
+				Additionally, <span class="highlight">nuclear power provides a stable and reliable source of
+					energy</span>.
+				Unlike renewable sources such as solar and wind, which depend on weather conditions and
+				time of day, nuclear energy can produce electricity continuously, 24/7. This consistency
+				is invaluable for maintaining the energy supply needed to support Italy's industrial base
+				and residential needs without interruption. Additionally, the technology behind nuclear energy
+				has also advanced significantly. Modern nuclear reactors are designed with enhanced safety
+				features that reduce the risk of accidents.
+			</p>
+		</div>
+
+	</div>
+
+	<script>
+
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+		var navElement = document.querySelector("header");
+		navElement.style.backgroundColor = "transparent";
+		function changeCss() {
+			this.scrollY > vh ? (navElement.style.backgroundColor = "white") : (navElement.style.backgroundColor = "transparent");
+		}
+
+		window.addEventListener("scroll", changeCss, false);
+	</script>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- Site footer -->
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<h6>About</h6>
+					<p class="text-justify">Data visualization project realized for LUISS Guido Carli University.
+						The aim is to highlight the need for a low environmental impact energy source such as
+						nuclear through the use of simple and effective visualizations. It provides a clear view of
+						what is the actual consumption and production of energy and what are the various indicators
+						that show the environmental impact for the different energy sources widely used.
+					</p>
+				</div>
+
+				<br>
+
+				<div class="col-xs-6 col-md-3">
+					<h6>Contacts</h6>
+					<ul class="footer-links">
+						<li><a href="">Elisa Dobici</a></li>
+						<li><a href="https://www.linkedin.com/in/simone-granato">Simone Granato</a></li>
+						<li><a href="https://www.linkedin.com/in/simone-luzi">Simone Luzi</a></li>
+					</ul>
+				</div>
+
+
+			</div>
+			<br>
+			<hr>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-6 col-xs-12">
+					<p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by
+						<a href="https://www.luiss.it/">LUISS Guido Carli</a>.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
