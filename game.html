@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<link href="dino.css" rel="stylesheet" type="text/css">
+	<link href="game.css" rel="stylesheet" type="text/css">
 	<link href="card.css" rel="stylesheet" type="text/css">
 	<link rel="icon" type="image/jpg" href="images/favicon.jpg">
 	<title>Game</title>
@@ -14,7 +14,7 @@
 <body>
 	<header>
 		<div class="navbar-container">
-			<img src="images/nuclear_logo.png" alt="logo" class="logo">
+			<img src="images/nuClear_logo.png" alt="logo" class="logo">
 			<nav>
 				<ul>
 					<li><a href="./index.html"><b>Home</b></a></li>
@@ -37,11 +37,12 @@
 
 		<div class="notifications-container">
 			<div class="success">
-				
+
 				<div class="flex reverse">
 					<div class="game">
-						
-						
+
+						<div class="score">0</div>
+
 						<div id="end_sign" class="d-none">
 							<div class="game-over-container" >
 							<img src="./images/game_over.png" alt="gameover">
@@ -59,15 +60,61 @@
 		</div>
 	</div>
 </div>
-	
-	
+<br>
+		<br>
+		<br>
+		<br>
+
+		<!-- Site footer -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<h6>About</h6>
+						<p class="text-justify">Data visualization project realized for LUISS Guido Carli University.
+							The aim is to highlight the need for a low environmental impact energy source such as
+							nuclear through the use of simple and effective visualizations. It provides a clear view of
+							what is the actual consumption and production of energy and what are the various indicators
+							that show the environmental impact for the different energy sources widely used.
+						</p>
+					</div>
+
+					<br>
+
+					<div class="col-xs-6 col-md-3">
+						<h6>Contacts</h6>
+						<ul class="footer-links">
+							<li><a href="">Elisa Dobici</a></li>
+							<li><a href="https://www.linkedin.com/in/simone-granato">Simone Granato</a></li>
+							<li><a href="https://www.linkedin.com/in/simone-luzi">Simone Luzi</a></li>
+						</ul>
+					</div>
+
+
+				</div>
+				<br>
+				<hr>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-6 col-xs-12">
+						<p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by
+							<a href="https://www.luiss.it/">LUISS Guido Carli</a>.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
 	<script>
-
-
 		const player = document.querySelector('.player')
 		const obstacle_container = document.querySelector('.obstacle-container')
 		const end_sign = document.getElementById('end_sign')
 		const restart = document.querySelector(".restart-container");
+		const score_container = document.querySelector(".score");
+
+		let score = 0;
 		let isJumping = false
 		let gravity = 0.9
 		let isGameOver = false
@@ -93,6 +140,8 @@
 			end_sign.classList.add('d-none')
 			player.attributes.src.value = "./images/player.png"
 			player.style.bottom = '0px'
+			score_container.textContent = 0;
+			score = 0;
 			generateObstacle();
 		}
 
@@ -165,6 +214,8 @@
 				if (obstaclePostion < 0) {
 					clearInterval(timerId)
 					obstacle.style.display = "none";
+					score++;
+					score_container.textContent = score;
 				}
 				obstaclePostion -= 10;
 				obstacle.style.left = obstaclePostion + 'px';
@@ -172,8 +223,5 @@
 			if (!isGameOver) setTimeout(generateObstacle, randomTime)
 		}
 	</script>
-
-
 </body>
-
 </html>
